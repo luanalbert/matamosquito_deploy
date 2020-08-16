@@ -2,7 +2,7 @@ html {
     cursor: url(/image/mata_mosca.png) 30 30, auto;
 }
 body {
-    background-image: url(/image/bg.jpg);
+    background: url(/image/bg.jpg) greenyellow;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 10px 30px 10px 30px;
