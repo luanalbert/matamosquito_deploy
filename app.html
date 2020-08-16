@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title> Mata Mosquito </title>
+
+	<link rel="stylesheet" href="style.css">
+	<script src="limite-janela.js"></script>
+	<script src="add-mosquito-positionRandomica.js"></script>
+	<script src="tamanho.mosquito.js"></script>
+	<script src="lado_aleatorio.js"></script>
+	
+</head>
+<!-- onresize que vai levar os valores para dentro as variaveis no JS -->
+
+<body onresize="ajustaTamanhoPalcoJogo()">
+
+	<div class="painel">
+		<div class="vidas">
+			<img id="v1" src="/image/coracao_cheio.png" alt="">
+			<img id="v2" src="/image/coracao_cheio.png" alt="">
+			<img id="v3" src="/image/coracao_cheio.png" alt="">
+		</div>
+		<div class="cronometro">
+			Tempo Restante: <span id="cronometro"> </span>
+		</div>
+	</div>
+
+	<script>
+		document.getElementById('cronometro').innerHTML = tempo
+
+		posicaoRandomica()
+		tamanhoAleatorio()
+		ladoAleatorio()
+
+		var criaMosquito = setInterval(function(){
+			posicaoRandomica()
+		}, criaMosquitoTempo)
+	</script>
+</body>
+
+</html>
